@@ -4,6 +4,7 @@ import DeliveryAgent from "../models/deliveryAgent.model.js";
 import jwt from "jsonwebtoken";
 
 export default async function handlePostLogin(req, res) {
+  console.log("login")
   const { userEmail } = req.body;
 
   try {

@@ -4,6 +4,7 @@ import nodemailer from "nodemailer";
 import DeliveryAgent from "../models/deliveryAgent.model.js"
 
 export default async function sendEmail(req, res) {
+  console.log("testing")
   const max = 999999;
   const min = 100000;
   const otp = Math.floor(Math.random() * (max - min + 1)) + min;
@@ -36,6 +37,7 @@ export default async function sendEmail(req, res) {
     });
   };
   const email = req.body.userEmail;
+  console.log(req.body)
   try {
     const user = await User.findOne({ userEmail: email });
       if (!user) {

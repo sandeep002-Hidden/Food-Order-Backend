@@ -18,7 +18,7 @@ import deliverAgentRouter from "./routes/deliverAgent.router.js"
 dotenv.config();
 
 const app = express();
-
+console.log(process.env.MYEMAIL)
 try {
   connectDB();
   console.log("Connected success fully");
@@ -28,7 +28,7 @@ try {
 app.use(cookieParser())
 
 app.use(cors({
-  origin: 'https://ordernow-sandeepmohapatra.vercel.app', 
+  origin: ['http://localhost:3000','https://ordernow-sandeepmohapatra.vercel.app' ],
   credentials: true,
 }));
 
@@ -75,5 +75,5 @@ app.get("/verify", async (req, res) => {
 const PORT = process.env.PORT || 6000;
 
 app.listen(PORT, () => {
-  console.log("Server is running 8000 ");
+  console.log(`Server is running ${PORT} `);
 });
