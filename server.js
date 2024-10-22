@@ -28,7 +28,7 @@ try {
 app.use(cookieParser())
 
 app.use(cors({
-  origin: ['http://localhost:3000','http://192.168.6.182:8000'],
+  origin: [process.env.LOCAL,process.env.NATIVE,process.env.FORNTEND],
   credentials: true,
 }));
 app.use(express.json());
