@@ -18,7 +18,7 @@ import deliverAgentRouter from "./routes/deliverAgent.router.js"
 dotenv.config();
 
 const app = express();
-console.log(process.env.MYEMAIL)
+console.log(process.env.EMAIL)
 try {
   connectDB();
   console.log("Connected success fully");
