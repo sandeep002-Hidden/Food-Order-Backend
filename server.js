@@ -71,7 +71,8 @@ app.get("/verify", async (req, res) => {
     return res.status(401).json({ message: "Token is not valid", success: false });
   }
 });
+const PORT = process.env.PORT || 6000;
 
-app.listen(8000, () => {
+app.listen(PORT, () => {
   console.log("Server is running 8000 ");
 });
