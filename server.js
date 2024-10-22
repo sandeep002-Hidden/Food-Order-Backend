@@ -28,7 +28,7 @@ try {
 app.use(cookieParser())
 
 app.use(cors({
-  origin: ['https://ordernow-sandeepmohapatra.vercel.app/','http://192.168.6.182:8000','http://localhost:3000'],
+  origin: '*',
   credentials: true,
 }));
 app.use(express.json());
