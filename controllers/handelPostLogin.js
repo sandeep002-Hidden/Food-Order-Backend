@@ -31,7 +31,8 @@ export default async function handlePostLogin(req, res) {
           return res.cookie("orderNow", cookie, {
             maxAge: 24 * 60 * 60 * 1000,
             httpOnly: true,
-            sameSite:"None"
+            sameSite:"None",
+            secure: true,
           }).json({
             message: "Login successful",
             success: true,
@@ -47,7 +48,8 @@ export default async function handlePostLogin(req, res) {
         return res.cookie("orderNow", cookie, {
           maxAge: 24 * 60 * 60 * 1000,
           httpOnly: true,
-          sameSite:"None"
+          sameSite:"None",
+          secure: true
 
         }).json({
           message: "Login successful",
@@ -64,7 +66,8 @@ export default async function handlePostLogin(req, res) {
       return res.cookie("orderNow", cookie, {
         maxAge: 24 * 60 * 60 * 1000,
         httpOnly: true,
-        sameSite:"None"
+        sameSite:"None",
+        secure: true
 
       }).json({
         message: "Login successful",
