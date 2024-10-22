@@ -28,9 +28,10 @@ try {
 app.use(cookieParser())
 
 app.use(cors({
-  origin: '*',
+  origin: 'https://ordernow-sandeepmohapatra.vercel.app', 
   credentials: true,
 }));
+
 app.use(express.json());
 
 app.use("/signup", signUpRouter);
